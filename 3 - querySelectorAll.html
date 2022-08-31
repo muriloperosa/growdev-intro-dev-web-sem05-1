@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - querySelectorAll</title>
+    <style>
+       div.special, p.special, #paragrafo  {
+         background-color: aqua;
+       }
+    </style>
+</head>
+<body>
+    <button onclick="useQuerySelectorAll()">Click Me!</button>
+    <hr>
+    <div>
+        Esta é uma div.
+    </div>
+    <p id="paragrafo">
+        Este é um p.
+    </p>
+    <p class="p-class special">
+        Este é um p.
+    </p>
+    <div class="div-class special">
+        Esta é uma div.
+    </div>
+    <div class="div-class special">
+        Esta é uma div.
+    </div>
+    <div class="div-class special">
+        Esta é uma div.
+    </div>
+
+    <script>
+
+        /**
+         * querySelectorAll - retorna uma lista dos elementos 
+         * que sejam aderentes ao seletor passado como parametro.
+         **/
+        function useQuerySelectorAll () {   
+            const elements = document.querySelectorAll('div.special, p.special, #paragrafo');
+            // const elements = document.querySelector('div.special, p.special'); // retorna o primeiro que encontrar
+
+            console.log(elements);
+        }
+    </script>
+</body>
+</html>

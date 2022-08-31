@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - getAttribute</title>
+</head>
+<body>
+    <input type="number" min="0" max="100" step="1" value="80" id="iptNumber" data-day="friday">
+    <!-- <button id="btn" onclick="listAttributes">Click Me!</button> -->
+    <button id="btn">Click Me!</button>
+
+    <script>
+        /**
+         * getAttribute - retorna o valor do atributo passado como parametro.
+         **/
+
+        // Adiciona o evento ao click do botão
+        const button = document.getElementById('btn');
+        button.addEventListener('click', listAttributes);
+        
+        // button.addEventListener('click', () => {
+        //     alert('clicou!');
+        // });
+
+        function listAttributes(){
+            const input = document.getElementById('iptNumber');
+
+            console.log(`O valor do atributo type é: ${input.getAttribute('type')}`);
+            console.log(`O valor do atributo min é: ${input.getAttribute('min')}`);
+            console.log(`O valor do atributo max é: ${input.getAttribute('max')}`);
+            console.log(`O valor do atributo step é: ${input.getAttribute('step')}`);
+            console.log(`O valor do atributo id é: ${input.getAttribute('id')}`);
+            console.log(`O valor do atributo data-day é: ${input.getAttribute('data-day')}`);  // custom
+        }
+
+    </script>
+</body>
+</html>

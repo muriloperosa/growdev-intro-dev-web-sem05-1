@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - updateProperty</title>
+</head>
+<body>
+    <img src="./images/lampada_apagada.jpg" alt="Lampada" id="lampada">
+    <button onclick="interruptor()">Interruptor</button>
+
+    <script>
+        let estaAcessa = false;
+
+        function interruptor () {
+
+            const image = document.getElementById('lampada');
+            image.src = !estaAcessa ? './images/lampada_acessa.jpg' : './images/lampada_apagada.jpg';
+            image.alt = "Alt alterado";
+            image.classList = 'classe-1 classe-2';
+            image.style.width = '20vw';
+            estaAcessa = !estaAcessa;
+        }
+    </script>
+</body>
+</html>

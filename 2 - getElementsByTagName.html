@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - getElementsByTagName</title>
+</head>
+<body>
+    <button onclick="filterElements()">Encontrar h1's!</button>
+    <hr>
+    <main id="principal">
+        <h1>Este é um exemplo de tag h1.</h1>
+        <h2>Este é um exemplo de tag h2.</h2>
+        <h3>Este é um exemplo de tag h3.</h3>
+        <h4>Este é um exemplo de tag h4.</h4>
+        <h5>Este é um exemplo de tag h5.</h5>
+        <h6>Este é um exemplo de tag h6.</h6>
+        <p>Este é um exemplo de tag p.</p>
+        <strong>Este é um exemplo de tag strong.</strong>
+        <div>Este é um exemplo de tag div.</div>
+        <h1>Este é um exemplo de tag h1.</h1>
+        <h2>Este é um exemplo de tag h2.</h2>
+        <h3>Este é um exemplo de tag h3.</h3>
+        <h4>Este é um exemplo de tag h4.</h4>
+        <h5>Este é um exemplo de tag h5.</h5>
+        <h6>Este é um exemplo de tag h6.</h6>
+        <p>Este é um exemplo de tag p.</p>
+        <strong>Este é um exemplo de tag strong.</strong>
+        <div>Este é um exemplo de tag div.</div>
+        <h1>Este é um exemplo de tag h1.</h1>
+        <h2>Este é um exemplo de tag h2.</h2>
+        <h3>Este é um exemplo de tag h3.</h3>
+        <h4>Este é um exemplo de tag h4.</h4>
+        <h5>Este é um exemplo de tag h5.</h5>
+        <h6>Este é um exemplo de tag h6.</h6>
+        <p>Este é um exemplo de tag p.</p>
+        <strong>Este é um exemplo de tag strong.</strong>
+        <div>Este é um exemplo de tag div.</div>
+        <h1>Este é um exemplo de tag h1.</h1>
+        <h2>Este é um exemplo de tag h2.</h2>
+        <h3>Este é um exemplo de tag h3.</h3>
+        <p>Este é um exemplo de tag p.</p>
+        <strong>Este é um exemplo de tag strong.</strong>
+        <div>Este é um exemplo de tag div.</div>
+        <h1>Este é um exemplo de tag h1.</h1>
+    </main>
+
+    <script>
+        function filterElements () {
+
+            /**
+             * getElementsByTagName - retorna uma lista dos elementos 
+             * cuja tag foi passada por parametro.
+             **/
+            
+            const h1s = document.getElementsByTagName('h1');
+
+            for (let i = 0; i < h1s.length; i++) {
+               h1s[i].style.backgroundColor = 'yellow';
+            }
+        }
+    </script>
+</body>
+</html>

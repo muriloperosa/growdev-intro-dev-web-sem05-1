@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - innerHtml</title>
+</head>
+<body>
+    <div id="principal">
+        <p>Olá mundo!</p>
+    </div>
+    <button onclick="changeContent()">Click Me!</button>
+</body>
+<script>
+
+    /**
+     * innerHtml - Conteúdo HTML interno ao elemento.
+     **/
+
+    function changeContent(){
+       let content = "<p>Olá Murilo! <strong>Seja Bem vindo!</strong></p>";
+
+       const divPrincipal = document.getElementById('principal');
+    //    divPrincipal.innerText = content;
+       divPrincipal.innerHTML = content; // substitui tudo
+    //    divPrincipal.innerHTML += content; // concatena com o conteúdo atual
+    }
+</script>
+</html>

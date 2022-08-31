@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="principal" style="display: none;">
+        <!-- <h1>Hello World!</h1> -->
+        <img src="./images/lampada_acessa.jpg" alt="lampada">
+    </div>
+    <button onclick="showDiv()">Click Me!</button>
+
+    <script>
+        let clickCount = 0;
+
+        function showDiv()
+        {
+            // adiciona uma unidade ao contador de cliques
+            clickCount++;
+
+            const divPrincipal = document.getElementById('principal');
+            // const divPrincipal = document.querySelector('#principal');
+
+            divPrincipal.style.display = divPrincipal.style.display == 'none' ? '' : 'none';
+
+            let paragraphCount = document.getElementById('paragraph-count');
+
+            if (!paragraphCount)
+            {
+                paragraphCount = document.createElement('p');
+                paragraphCount.id = 'paragraph-count';
+                document.body.appendChild(paragraphCount);
+            }
+
+            paragraphCount.innerText = `O botão foi clicado ${clickCount} vez(es)!`;
+
+            // exemplo de imagem
+            // const img = document.createElement('img');
+            // img.src = './images/lampada_quebrada.jpg';
+            // img.alt = 'Lampada Quebrada';
+            // document.body.appendChild(img);
+        }
+    </script>
+</body>
+</html>

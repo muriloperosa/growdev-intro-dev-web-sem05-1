@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - setAttribute</title>
+</head>
+<body>
+    <input type="text" id="ipt">
+    <button id="btn">Click Me!</button>
+
+    <script>
+
+        /**
+         * setAttribute - altera o valor do atributo passado como parametro.
+         **/
+
+        const button = document.getElementById('btn');
+        button.addEventListener('click', updateInput);
+
+        function updateInput() {
+            const input = document.getElementById('ipt');
+            input.setAttribute('type', 'number');
+            input.setAttribute('min', 0);
+            input.setAttribute('max', 100);
+            input.setAttribute('step', 1);
+            input.setAttribute('value', 80);
+            input.setAttribute('data-day', 'friday'); // custom
+        }
+    </script>
+</body>
+</html>

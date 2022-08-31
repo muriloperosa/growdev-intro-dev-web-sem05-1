@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - getElementsByClassName</title>
+    <style>
+        .change-color {
+            background-color: orange;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .not-change-color {
+            background-color: gray;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColor()">Change Colors!</button>
+    <div class="change-color">
+        Change Color 1
+    </div>
+    <div class="not-change-color">
+        Not Change Color 1
+    </div>
+    <div class="change-color">
+        Change Color 2
+    </div>
+    <div class="not-change-color">
+        Not Change Color 2
+    </div>
+    <div class="change-color">
+        Change Color 3
+    </div>
+    <div class="not-change-color">
+        Not Change Color 3
+    </div>
+
+    <p class="change-color">
+        Esta é uma tag p.
+    </p>
+
+    <p class="not-change-color">
+        Esta é uma tag p.
+    </p>
+
+    <script>
+        function changeColor() {
+
+            /**
+             * getElementsByClassName - retorna uma lista dos elementos 
+             * cuja classe foi passada por parametro.
+             **/
+
+            const divs = document.getElementsByClassName('change-color'); // []
+            const color = generateColor();
+
+            for (let i = 0; i < divs.length; i++) {
+                // divs[i].style.backgroundColor = generateColor();                
+                divs[i].style.backgroundColor = color;
+            }
+        }
+
+        function generateColor() {
+            const cor =  '#' + parseInt((Math.random() * 0xFFFFFF)).toString(16).padStart(6, '0');
+            return cor;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 - location</title>
+</head>
+<body>
+    <button onclick="acessar()">Acessar Página!</button>
+    <script>
+        function acessar () {
+            const urlAtual = window.location.href;
+
+            // window.location.reload(); // recarrega a página
+            
+            window.location.href = 'https://www.growdev.com.br';
+            window.location.replace('https://google.com');
+
+            // abrir em nova aba
+            // window.open('https://google.com', '_blank');
+        }
+    </script>
+</body>
+</html>
